@@ -5,3 +5,4 @@ export NVM_DIR="/home/vagrant/.nvm"
 
 nvm install $1
 nvm alias default $2
+
