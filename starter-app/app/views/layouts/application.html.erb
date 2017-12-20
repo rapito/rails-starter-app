@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>StarterApp</title>
-    <%= csrf_meta_tags %>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title><%= App::NAME %></title>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
-  <body>
-    <%= yield %>
-  </body>
+		<% if content_for?(:head) %>
+			<%= yield(:head) %>
+		<% else %>
+			<%= render partial: 'layouts/base/head.html.erb' %>
+		<% end %>
+
+		<%= yield(:page_styles)%>
+
+	</head>
+	<body>
+		<% if content_for?(:body) %>
+			<%= yield(:body) %>
+		<% else %>
+			<%= render partial: 'layouts/base/application.html.erb' %>
+		<% end %>
+
+		<%= yield(:page_scripts)%>
+	</body>
 </html>

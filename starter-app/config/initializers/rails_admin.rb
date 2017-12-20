@@ -24,8 +24,8 @@ RailsAdmin.config do |config|
   # config.show_gravatar = true
 
   config.actions do
-    dashboard                     # mandatory
-    index                         # mandatory
+    dashboard # mandatory
+    index # mandatory
     new
     export
     bulk_delete
@@ -33,6 +33,9 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
+
+    config.main_app_name = [App::NAME, 'Admin']
+
 
     ## With an audit adapter, you can add:
     # history_index

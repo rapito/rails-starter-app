@@ -1,0 +1,9 @@
+@import "helpers";
+
+.btn {
+  @extend .clickable
+}
+
+.form-check-label {
+  @extend .clickable
+}
