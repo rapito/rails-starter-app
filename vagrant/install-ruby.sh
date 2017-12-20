@@ -15,3 +15,4 @@ fi
 
 rvm cleanup all
 gem install bundler
+apt-get -y install openssl libssl0.9.8 libssl-dev

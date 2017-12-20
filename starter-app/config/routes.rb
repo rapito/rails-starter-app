@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/uah_management', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/management', as: 'rails_admin'
   namespace :api, defaults: {format: :json} do
 
     namespace :v1 do

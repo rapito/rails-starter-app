@@ -1,5 +1,5 @@
 class Api::ApplicationController < ApplicationController
-	# include DeviseTokenAuth::Concerns::SetUserByToken
+	include DeviseTokenAuth::Concerns::SetUserByToken
 	before_action :authenticate_user!
 
 	respond_to :json
